@@ -1,0 +1,482 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./style/style.css">
+    <link rel="stylesheet" href="./style/javascript.js">
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
+    <link rel="stylesheet" href="./js/bootstrap.bundle.js">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
+    <style>
+      .modal-header {
+  background-color: #007bff;
+  color: #fff;
+  font-size: 1.5rem;
+  font-family: Arial, sans-serif;
+}
+
+.modal-body {
+  background-color: #f8f9fa;
+  font-size: 1.2rem;
+  font-family: Arial, sans-serif;
+}
+
+.modal-footer {
+  background-color: #f8f9fa;
+  font-size: 1.2rem;
+  font-family: Arial, sans-serif;
+}
+
+.filter-group h5 {
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin-top: 1.5rem;
+}
+
+.form-check-label {
+  font-size: 1.1rem;
+  font-family: Arial, sans-serif;
+}
+
+      </style>
+  </head>
+  <body onload="getLocation()">
+    <div id="ticker"></div>
+    <script src="ticker.js"></script>
+   <section id="header" >
+    <a href="#"><img src="./img/logo.png" class="logo" alt=""></a>
+    
+        <nav>
+                <ul class="navbar">
+                    <li><a href="./home.html">Home</a></li>
+                    <li><a class="active" href="#">Collection</a>
+                      <ul class="dropdown">
+                        <li><a href="./sunglasse.html">Sunglasses</a></li>
+                        <li><a href="./eyeglasses.html">Eyeglasses</a></li>
+                      </ul></li>
+                    <li><a href="./blog.html">Blog</a></li>
+                    <li><a href="./contact us.html">Contact us</a></li>
+                    <li><a href="./cart.html"><i class='bx bx-shopping-bag bx-tada bx-md' ></i></a></li>
+                    <li><a href="./sign in.html">sign in</a></li>
+                  </ul>
+        </nav>
+    </section>
+    
+<section id="page-header">
+    <h6><strong>#Hello Summer</strong></h6>
+    <p>EXTRA 60% OFF | VOUCHER: SUMMER!</p>
+</section>
+
+<section class="section-p2" style="display: block; text-align: center;"><!-- Button trigger modal -->
+  <button type="button" class="btn btn-success btn-lg" data-bs-toggle="modal" data-bs-target="#exampleModal">
+  Filter
+  </button>
+  
+  <!-- Modal -->
+  <div class="modal fade" style="text-align: center;" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Filter</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <div class="container">
+            <div class="row">
+              <div class="col-md-3">
+                <!-- Sort by list -->
+                <ul>
+                  <li><a href="#">Relevance</a></li>
+                  <li><a href="#">New Arrivals</a></li>
+                  <li><a href="#">Price Low-High</a></li>
+                  <li><a href="#">Price High-Low</a></li>
+                </ul>
+                <!-- Filter groups -->
+                <div class="filter-group">
+                  <h5>Polarized</h5>
+                  <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="" id="polarizedCheck">
+                    <label class="form-check-label" for="polarizedCheck">
+                      Polarized
+                    </label>
+                  </div>
+                </div>
+                <div class="filter-group">
+                  <h5>Photochromic</h5>
+                  <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="" id="photochromicCheck">
+                    <label class="form-check-label" for="photochromicCheck">
+                      Photochromic
+                    </label>
+                  </div>
+                </div>
+                <div class="filter-group">
+                  <h5>Foldable</h5>
+                  <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="" id="foldableCheck">
+                    <label class="form-check-label" for="foldableCheck">
+                      Foldable
+                    </label>
+                  </div>
+                </div>
+                <div class="filter-group">
+                  <h5>Icons</h5>
+                  <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="" id="iconsCheck">
+                    <label class="form-check-label" for="iconsCheck">
+                      Icons
+                    </label>
+                  </div>
+                </div>
+                <div class="filter-group">
+                  <h5>Prescription</h5>
+                  <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="" id="prescriptionCheck">
+                    <label class="form-check-label" for="prescriptionCheck">
+                      Prescription
+                    </label>
+                  </div>
+                </div>
+                <div class="filter-group">
+                  <h5>Gender</h5>
+                  <ul>
+                    <li><a href="#">Men</a></li>
+                    <li><a href="#">Women</a></li>
+                    <li><a href="#">Unisex</a></li>
+                  </ul>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-primary">Save changes</button>
+        </div>
+      </div>
+    </div>
+  </div></section>
+
+
+<section id="product1" class="section-p2">
+  <h6 style="font-size: 35px; color: rgb(64, 198, 198);margin-left: 300px;"><strong style="color: #222730;">EXTRA 60% OFF |</strong> VOUCHER: SUMMER</h6>
+
+  <div class="container" style="padding-top: 40px;">
+    <div class="row">
+     <div class="col-md-3" >
+            <div class="card" ><span class="border border-success">
+              <img src="./product image - Copy/1.png"  class="card-img-top" style="border: 1px solid rgb(193, 191, 191); margin: auto 6px; width: 95%;margin-top: 10px;">
+              <div class="card-body">
+                    <h5 class="card-title">persol 156708s</h5>
+                    <p class="card-text">$135.00</p>
+                    <button type="button" class="btn btn-success" data-toggle="modal" data-target="#product1" onclick="window.location.href='sproduct.html';">View Details</button>
+                   <a href="./cart.html"> <i type="button" class='bx bx-cart bx-sm bx-border-circle ' data-toggle="modal" data-target="#product1" data-product-id="product1" style="color:#198754; background-color: rgb(193, 243, 193); margin-left: 50px;" ></i></a>
+                  </span>
+              </div>
+               </div>
+          </div>
+        <div class="col-md-3">
+          <div class="card"><span class="border border-success">
+            <img src="./product image - Copy/2.png"  class="card-img-top" style="border: 1px solid rgb(193, 191, 191); margin: auto 6px; width: 95%;margin-top: 10px;">
+            <div class="card-body">
+                  <h5 class="card-title">Persol PO3007V </h5>
+                  <p class="card-text">$126.00</p>
+                  <button type="button" class="btn btn-success" data-toggle="modal" data-target="#product" onclick="window.location.href='sproduct.html';">View Details</button>
+                  <a href="./cart.html"> <i type="button" class='bx bx-cart bx-sm bx-border-circle ' data-toggle="modal" data-target="#product1" data-product-id="product1" style="color:#198754; background-color: rgb(193, 243, 193); margin-left: 50px;" ></i></a>
+                </span>
+            </div>
+            </div>
+        </div>
+        <div class="col-md-3">
+          <div class="card"><span class="border border-success">
+            <img src="./product image - Copy/3.png"  class="card-img-top" style="border: 1px solid rgb(193, 191, 191); margin: auto 6px; width: 95%;margin-top: 10px;">
+            <div class="card-body">
+                  <h5 class="card-title">Persol PO3292V</h5>
+                  <p class="card-text">$109.99</p>
+                  <button type="button" class="btn btn-success" data-toggle="modal" data-target="#product1" onclick="window.location.href='sproduct.html';">View Details</button>
+                  <a href="./cart.html"> <i type="button" class='bx bx-cart bx-sm bx-border-circle ' data-toggle="modal" data-target="#product1" data-product-id="product1" style="color:#198754; background-color: rgb(193, 243, 193); margin-left: 50px;" ></i></a>
+                </span>
+            </div>
+              </div>
+          </div>
+          <div class="col-md-3">
+            <div class="card"><span class="border border-success">
+              <img src="./product image - Copy/4.png"  class="card-img-top" style="border: 1px solid rgb(193, 191, 191); margin: auto 6px; width: 95%;margin-top: 10px;">
+              <div class="card-body">
+                    <h5 class="card-title">Persol PO3092V</h5>
+                    <p class="card-text">$157.99</p>
+                    <button type="button" class="btn btn-success" data-toggle="modal" data-target="#product1" onclick="window.location.href='sproduct.html';">View Details</button>
+                    <a href="./cart.html"> <i type="button" class='bx bx-cart bx-sm bx-border-circle ' data-toggle="modal" data-target="#product1" data-product-id="product1" style="color:#198754; background-color: rgb(193, 243, 193); margin-left: 50px;" ></i></a>
+                  </span>
+              </div>
+              </div>
+          </div>
+
+          <div class="container" style="padding-top: 40px;">
+            <div class="row">
+             <div class="col-md-3" >
+                    <div class="card"><span class="border border-success">
+                      <img src="./product image - Copy/5.png"  class="card-img-top" style="border: 1px solid rgb(193, 191, 191); margin: auto 6px; width: 95%;margin-top: 10px;">
+                      <div class="card-body">
+                            <h5 class="card-title">Persol PO3189V</h5>
+                            <p class="card-text">$170.99</p>
+                            <button type="button" class="btn btn-success" data-toggle="modal" data-target="#product1" onclick="window.location.href='sproduct.html';">View Details</button>
+                            <a href="./cart.html"> <i type="button" class='bx bx-cart bx-sm bx-border-circle ' data-toggle="modal" data-target="#product1" data-product-id="product1" style="color:#198754; background-color: rgb(193, 243, 193); margin-left: 50px;" ></i></a>
+                          </span>
+                      </div>
+                       </div>
+                  </div>
+                <div class="col-md-3">
+                  <div class="card"><span class="border border-success">
+                    <img src="./product image - Copy/6.png"  class="card-img-top" style="border: 1px solid rgb(193, 191, 191); margin: auto 6px; width: 95%;margin-top: 10px;">
+                    <div class="card-body">
+                          <h5 class="card-title">Persol PO3258V</h5>
+                          <p class="card-text">$99.99</p>
+                          <button type="button" class="btn btn-success" data-toggle="modal" data-target="#product1" onclick="window.location.href='sproduct.html';">View Details</button>
+                         <a href="./cart.html"> <i type="button" class='bx bx-cart bx-sm bx-border-circle ' data-toggle="modal" data-target="#product1" data-product-id="product1" style="color:#198754; background-color: rgb(193, 243, 193); margin-left: 50px;" ></i></a>
+                        </span>
+                    </div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                  <div class="card"><span class="border border-success">
+                    <img src="./product image - Copy/7.png"  class="card-img-top" style="border: 1px solid rgb(193, 191, 191); margin: auto 6px; width: 95%;margin-top: 10px;">
+                    <div class="card-body">
+                          <h5 class="card-title">Persol PO3269S</h5>
+                          <p class="card-text">$157.99</p>
+                          <button type="button" class="btn btn-success" data-toggle="modal" data-target="#product1" onclick="window.location.href='sproduct.html';">View Details</button>
+                         <a href="./cart.html"> <i type="button" class='bx bx-cart bx-sm bx-border-circle ' data-toggle="modal" data-target="#product1" data-product-id="product1" style="color:#198754; background-color: rgb(193, 243, 193); margin-left: 50px;" ></i></a>
+                        </span>
+                    </div>
+                      </div>
+                  </div>
+                  <div class="col-md-3">
+                    <div class="card"><span class="border border-success">
+                      <img src="./product image - Copy/8.png"  class="card-img-top" style="border: 1px solid rgb(193, 191, 191); margin: auto 6px; width: 95%;margin-top: 10px;">
+                      <div class="card-body">
+                            <h5 class="card-title">Persol PO5007VT</h5>
+                            <p class="card-text">$246.99</p>
+                            <button type="button" class="btn btn-success" data-toggle="modal" data-target="#product1" onclick="window.location.href='sproduct.html';">View Details</button>
+                           <a href="./cart.html"> <i type="button" class='bx bx-cart bx-sm bx-border-circle ' data-toggle="modal" data-target="#product1" data-product-id="product1" style="color:#198754; background-color: rgb(193, 243, 193); margin-left: 50px;" ></i></a>
+                          </span>
+                      </div>
+                      </div>
+                  </div>
+
+
+                  <div class="container" style="padding-top: 40px;">
+                    <div class="row">
+                     <div class="col-md-3" >
+                            <div class="card"><span class="border border-success">
+                              <img src="./product image - Copy/9.png"  class="card-img-top" style="border: 1px solid rgb(193, 191, 191); margin: auto 6px; width: 95%;margin-top: 10px;">
+                              <div class="card-body">
+                                    <h5 class="card-title">Persol PO3152S</h5>
+                                    <p class="card-text">$290.99</p>
+                                    <button type="button" class="btn btn-success" data-toggle="modal" data-target="#product1" onclick="window.location.href='sproduct.html';">View Details</button>
+                                   <a href="./cart.html"> <i type="button" class='bx bx-cart bx-sm bx-border-circle ' data-toggle="modal" data-target="#product1" data-product-id="product1" style="color:#198754; background-color: rgb(193, 243, 193); margin-left: 50px;" ></i></a>
+                                  </span>
+                              </div>
+                               </div>
+                          </div>
+                        <div class="col-md-3">
+                          <div class="card"><span class="border border-success">
+                            <img src="./product image - Copy/Untitled design.png"  class="card-img-top" style="border: 1px solid rgb(193, 191, 191); margin: auto 6px; width: 95%;margin-top: 10px;">
+                            <div class="card-body">
+                                  <h5 class="card-title">Persol PO3281V</h5>
+                                  <p class="card-text">$159.99</p>
+                                  <button type="button" class="btn btn-success" data-toggle="modal" data-target="#product1" onclick="window.location.href='sproduct.html';">View Details</button>
+                                 <a href="./cart.html"> <i type="button" class='bx bx-cart bx-sm bx-border-circle ' data-toggle="modal" data-target="#product1" data-product-id="product1" style="color:#198754; background-color: rgb(193, 243, 193); margin-left: 50px;" ></i></a>
+                                </span>
+                            </div>
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                          <div class="card"><span class="border border-success">
+                            <img src="./product image - Copy/11.png"  class="card-img-top" style="border: 1px solid rgb(193, 191, 191); margin: auto 6px; width: 95%;margin-top: 10px;">
+                            <div class="card-body">
+                                  <h5 class="card-title">Persol PO2494V</h5>
+                                  <p class="card-text">$230.99</p>
+                                  <button type="button" class="btn btn-success" data-toggle="modal" data-target="#product1" onclick="window.location.href='sproduct.html';">View Details</button>
+                                 <a href="./cart.html"> <i type="button" class='bx bx-cart bx-sm bx-border-circle ' data-toggle="modal" data-target="#product1" data-product-id="product1" style="color:#198754; background-color: rgb(193, 243, 193); margin-left: 50px;" ></i></a>
+                                </span>
+                            </div>
+                              </div>
+                          </div>
+                          <div class="col-md-3">
+                            <div class="card"><span class="border border-success">
+                              <img src="./product image - Copy/12.png"  class="card-img-top" style="border: 1px solid rgb(193, 191, 191); margin: auto 6px; width: 95%;margin-top: 10px;">
+                              <div class="card-body">
+                                    <h5 class="card-title">Persol PO3143V</h5>
+                                    <p class="card-text">$270.99</p>
+                                    <button type="button" class="btn btn-success" data-toggle="modal" data-target="#product1" onclick="window.location.href='sproduct.html';">View Details</button>
+                                   <a href="./cart.html"> <i type="button" class='bx bx-cart bx-sm bx-border-circle ' data-toggle="modal" data-target="#product1" data-product-id="product1" style="color:#198754; background-color: rgb(193, 243, 193); margin-left: 50px;" ></i></a>
+                                  </span>
+                              </div>
+                              </div>
+                          </div>
+          
+                          <div class="container" style="padding-top: 40px;">
+                            <div class="row">
+                             <div class="col-md-3" >
+                                    <div class="card"><span class="border border-success">
+                                      <img src="./product image - Copy/13.png"  class="card-img-top" style="border: 1px solid rgb(193, 191, 191); margin: auto 6px; width: 95%;margin-top: 10px;">
+                                      <div class="card-body">
+                                            <h5 class="card-title">Persol PO3019S</h5>
+                                            <p class="card-text">$193.99</p>
+                                            <button type="button" class="btn btn-success" data-toggle="modal" data-target="#product1" onclick="window.location.href='sproduct.html';">View Details</button>
+                                           <a href="./cart.html"> <i type="button" class='bx bx-cart bx-sm bx-border-circle ' data-toggle="modal" data-target="#product1" data-product-id="product1" style="color:#198754; background-color: rgb(193, 243, 193); margin-left: 50px;" ></i></a>
+                                          </span>
+                                      </div>
+                                       </div>
+                                  </div>
+                                <div class="col-md-3">
+                                  <div class="card"><span class="border border-success">
+                                    <img src="./product image - Copy/14.png"  class="card-img-top" style="border: 1px solid rgb(193, 191, 191); margin: auto 6px; width: 95%;margin-top: 10px;">
+                                    <div class="card-body">
+                                          <h5 class="card-title">Persol PO3291S</h5>
+                                          <p class="card-text">$350.99</p>
+                                          <button type="button" class="btn btn-success" data-toggle="modal" data-target="#product1" onclick="window.location.href='sproduct.html';">View Details</button>
+                                         <a href="./cart.html"> <i type="button" class='bx bx-cart bx-sm bx-border-circle ' data-toggle="modal" data-target="#product1" data-product-id="product1" style="color:#198754; background-color: rgb(193, 243, 193); margin-left: 50px;" ></i></a>
+                                        </span>
+                                    </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-3">
+                                  <div class="card"><span class="border border-success">
+                                    <img src="./product image - Copy/15.png"  class="card-img-top" style="border: 1px solid rgb(193, 191, 191); margin: auto 6px; width: 95%;margin-top: 10px;">
+                                    <div class="card-body">
+                                          <h5 class="card-title">Persol PO3253V</h5>
+                                          <p class="card-text">$710.99</p>
+                                          <button type="button" class="btn btn-success" data-toggle="modal" data-target="#product1" onclick="window.location.href='sproduct.html';">View Details</button>
+                                         <a href="./cart.html"> <i type="button" class='bx bx-cart bx-sm bx-border-circle ' data-toggle="modal" data-target="#product1" data-product-id="product1" style="color:#198754; background-color: rgb(193, 243, 193); margin-left: 50px;" ></i></a>
+                                        </span>
+                                    </div>
+                                      </div>
+                                  </div>
+                                  <div class="col-md-3">
+                                    <div class="card"><span class="border border-success">
+                                      <img src="./product image - Copy/16.png"  class="card-img-top" style="border: 1px solid rgb(193, 191, 191); margin: auto 6px; width: 95%;margin-top: 10px;">
+                                      <div class="card-body">
+                                            <h5 class="card-title">Persol PO3092SM</h5>
+                                            <p class="card-text">$362.99</p>
+                                            <button type="button" class="btn btn-success" data-toggle="modal" data-target="#product1" onclick="window.location.href='sproduct.html';">View Details</button>
+                                           <a href="./cart.html"> <i type="button" class='bx bx-cart bx-sm bx-border-circle ' data-toggle="modal" data-target="#product1" data-product-id="product1" style="color:#198754; background-color: rgb(193, 243, 193); margin-left: 50px;" ></i></a>
+                                          </span>
+                                      </div>
+                                      </div>
+                                  </div>
+
+</section>
+
+
+
+<section id="newsletter" class="section-p1">
+    <div class="newstext">
+     <h6>Sign Up for Newsletter</h6>
+     <P>Get E-mail Updates about our latest shops and <span>special offer.</span></P>
+    </div>
+    <div class="form">
+     <input type="text" placeholder="Your email address">
+     <button class="btn btn-success" >Sign Up</button>
+    </div>
+   </section>
+
+   <script>var ticker = document.getElementById("ticker");
+
+    function getLocation() {
+      if (navigator.geolocation) {
+        navigator.geolocation.getCurrentPosition(showPosition);
+      } else {
+        ticker.innerHTML = "Geolocation is not supported by this browser.";
+      }
+    }
+    
+    function showPosition(position) {
+      var lat = position.coords.latitude;
+      var lon = position.coords.longitude;
+      var url = "https://geocode.xyz/" + lat + "," + lon + "?json=1";
+    
+      fetch(url)
+        .then(response => response.json())
+        .then(data => {
+          var location = data.city + ", " + data.region;
+          ticker.innerHTML = "Location: " + location + " | " + getDateAndTime();
+          setInterval(function() {
+            ticker.innerHTML = "Location: " + location + " | " + getDateAndTime();
+          }, 1000);
+        })
+        .catch(error => {
+          ticker.innerHTML = "Error: " + error;
+        });
+    }
+    
+    function getDateAndTime() {
+      var now = new Date();
+      var date = now.toLocaleDateString();
+      var time = now.toLocaleTimeString();
+      return date + " | " + time;
+    }</script>
+
+   
+   <footer class="section-p1">
+     <div class="col">
+   <img src="./img/logo.png" alt="logo" height="30%" width="30%" style="margin-bottom: 30px;">
+   <h6><strong>Contact</strong></h6>
+   <p><strong>Address:</strong> 253 Elizabeth St, New York, NY 10012</p>
+   <p><strong>Phone:</strong> (+1) 646-666-7280</p>
+   <p><strong>Hours:</strong>Monday - Saturday 10.00 am - 06.00 pm <br>Sunday 12.00 am - 06.00 pm</p>
+   <div class="follow">
+   <h6><strong>Follow Us</strong></h6>
+   <div class="ICON">
+     <i class="fa-brands fa-facebook-f"></i>
+     <i class="fa-brands fa-twitter" style="color: #9ab5e5;"></i>
+     <i class="fa-brands fa-pinterest" style="color: #d51515;"></i>
+     <i class="fa-brands fa-instagram" style="color: #e9167c;"></i>
+     <i class="fa-brands fa-youtube" style="color: #f91010;"></i>
+   </div>
+   </div>  
+   </div>
+   <div class="col">
+   <h6><strong>About</strong></h6>
+   <a href="#">About Us</a>
+   <a href="#">Shipping information</a>
+   <a href="#">Terms & conditions</a>
+   <a href="#">Privacy Policy</a>
+   <a href="#">FAQs</a>
+   <a href="#">Contact Us</a>
+   </div>
+   
+   <div class="col">
+     <h6><strong>My Account</strong></h6>
+     <a href="#" >Sign in</a>
+     <a href="#">View Cart</a>
+     <a href="#">My Wishlist</a>
+     <a href="#">Track My Order</a>
+     <a href="#">Help</a>
+     </div>
+     <div class="col">
+       <h6><strong>Links</strong></h6>
+     <a href="./home.html">Home</a>
+     <a href="./collection.html">Collection</a>
+     <a href="./blog.html">Blog</a>
+     <a href="#">About Us</a>
+     <a href="./contact us.html">Contact us</a>
+     </div>
+     <div class="col install">
+     <div class="row">
+       <strong>Payment methods:</strong>
+       <p>Secured Payments Gateways</p>
+       <img src="./img/pay.png" alt="" style="height: 40%; width: 100%;" >
+     </div>
+   </div>
+     <div class="copyright">
+       <p>Copyright © 2023 - Persol | All Right Reserved</p>
+     </div>
+   </footer>
+
+<!-- bootstrap 5 js-->
+ <script src="./js/bootstrap.min.js"></script>
+
+ <!-- main js-->
+ <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+</body>
+</html>

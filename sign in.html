@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./style/style.css">
+    <link rel="stylesheet" href="./style/javascript.js">
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
+    <link rel="stylesheet" href="./js/bootstrap.bundle.js">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
+</head>
+<body>
+   <section id="header">
+    <a href="#"><img src="./img/logo.png" class="logo" alt=""></a>
+ 
+        <nav>
+                <ul class="navbar">
+                    <li><a href="./home.html">Home</a></li>
+                    <li><a href="./collection.html">Collection</a>
+                        <ul class="dropdown">
+                            <li><a href="./sunglasse.html">Sunglasses</a></li>
+                            <li><a href="./eyeglasses.html">Eyeglasses</a></li>
+                          </ul></li>
+                    <li><a href="./blog.html">Blog</a></li>
+                <li><a href="./contact us.html">Contact us</a></li>
+                <li><a href="./cart.html"><i class='bx bx-shopping-bag bx-tada bx-md' ></i></a></li>
+                <li><a  class="active" href="#">sign in</a></li>
+              </ul>
+        </nav>
+    </section>
+
+<section class="sign-in">
+    
+    <form id="LoginForm">
+      <div class="form-box">
+        <div class="header-text">
+          Login Form
+        </div><input placeholder="Your Email Address" type="text"> <input placeholder="Your Password" type="password"> <input id="terms" type="checkbox"> <label for="terms"></label><span>Agree with <a href="#">Terms & Conditions</a></span> <button>login</button>
+      </div>
+    </form>
+    
+   
+</section>
+
+<script>
+  var LoginForm = document.getElementById("LoginForm");
+  var RegForm = document.getElementById("RegForm");
+  var Indicator = document.getElementById("Indicator");
+  
+    function register(){
+    
+      RegForm.style.transform = "translateX(0px)";
+      LoginForm.style.transform = "translateX(0px)";
+      Indicator.style.transform = "translateX(100px)";
+      
+      
+    }
+    
+    function login(){
+    
+      RegForm.style.transform = "translateX(300px)";
+      LoginForm.style.transform = "translateX(300px)";
+      Indicator.style.transform = "translateX(0px)";
+      
+    }
+    
+  </script>
+  
+
+
+<!-- bootstrap 5 js-->
+ <script src="./js/bootstrap.min.js"></script>
+
+ <!-- main js-->
+ <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+</body>
+</html>
